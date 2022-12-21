@@ -1,0 +1,561 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bb8 {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+}
+
+.hoofd {
+  position: absolute;
+  width: 11.875rem;
+  height: 7.188rem;
+  top: 5.9rem;
+  left: 6.875rem;
+  border-radius: 5.625rem 5.625rem 0rem 0rem;
+  border: 0.25rem solid #858381;
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, white 0%, white 10%, #858381 10%, #858381 20%, white 20%, white 30%, #F2843A 30%, #F2843A 45%, white 45%);
+  transform-origin: center bottom;
+  transform: rotate(0deg) translateY(-14.688rem);
+  transition: .2s;
+}
+
+.bb8:hover .hoofd {
+  animation-name: hoofd;
+  animation-duration:2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hoofd{
+  0%{
+    transform: rotate(0deg) translateY(-14.688rem);
+  }
+    50%{
+    transform: rotate(10deg) translateY(-15.688rem);
+  }
+  100% {
+    transform: rotate(23deg) translateY(-14.688rem);
+  }
+}
+
+.oog {
+  box-shadow: 0 0 0 10px white;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #333133;
+  top: 10rem;
+  left: 4.25rem;
+  transform-origin: center;
+  transform: translateY(-7.813rem);
+}
+
+.oog_binnen {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #858381;
+  top: 10rem;
+  left: 4.688rem;
+  transform-origin: center;
+  transform: translateY(-7.375rem);
+}
+
+.cirkel_onder_oog {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 10rem;
+  left: 4.969rem;
+  transform-origin: center;
+  transform: translateY(-4.688rem);
+}
+
+.cirkel_rechts_oog {
+  position: absolute;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background-color: #333133;
+  border: 0.188rem solid grey;
+  top: 10rem;
+  left: 7.375rem;
+  transform-origin: center;
+  transform: translateY(-5.938rem);
+}
+
+.lichaam {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0.375rem solid #858381;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: inset -1em -1em 0 1em rgba(128, 128, 128, .1);
+  animation-name: draaien;
+  transform: rotate(90deg);
+}
+
+.bb8:hover .lichaam {
+  animation-name: draaien;
+  animation-duration:.1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes draaien {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.lichaam_binnen {
+  position: absolute;
+  width: 12.5rem;
+  height: 12.5rem;
+  top: 5.938rem;
+  left: 5.938rem;
+  border: 0.375rem solid #858381;
+  background: #F2843A;
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+.antenne_1 {
+  overflow: visible;
+  z-index: 1;
+  width: 0.375rem;
+  height: 3.750rem;
+  background-color: #858381;
+  position: absolute;
+  top: 10rem;
+  left: 6.25rem;
+  transform-origin: left;
+  transform: translateY(-13.750rem);
+}
+
+.antenne_2 {
+  overflow: visible;
+  z-index: 1;
+  width: 0.375rem;
+  height: 1.25rem;
+  background-color: #858381;
+  position: absolute;
+  top: 10rem;
+  left: 5.188rem;
+  transform-origin: left;
+  transform: translateY(-11.250rem);
+}
+
+.oranje_streepen_1 {
+  width: 0.563rem;
+  height: 1.250rem;
+  background-color: #F2843A;
+  position: absolute;
+  top: 5.875rem;
+  left: 0.625rem;
+}
+
+.oranje_streepen_2 {
+  width: 1rem;
+  height: 1.25rem;
+  background-color: #F2843A;
+  position: absolute;
+  top: 5.875rem;
+  left: 1.563rem;
+}
+
+.oranje_streepen_3 {
+  width: 0.536rem;
+  height: 1.25rem;
+  background-color: #F2843A;
+  position: absolute;
+  top: 5.875rem;
+  left: 2.813rem;
+}
+
+.oranje_streepen_4 {
+  width: 0.563rem;
+  height: 1.25rem;
+  background-color: #F2843A;
+  position: absolute;
+  top: 5.875rem;
+  left: 10rem;
+}
+
+.grijze_bar {
+  overflow: visible;
+  position: absolute;
+  height: 0;
+  width: 11.8rem;
+  top: 9.7rem;
+  left: -0.25rem;
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+  border-top: 1rem solid #858381;
+  transform-origin: center;
+  transform: translateY(-2.813rem);
+}
+
+.rand_cirkel1 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  top: -1.25rem;
+  left: -2.813rem;
+  background: #F2843A;
+  border-radius: 50%;
+  border: 6px solid #858381;
+}
+
+.rand_cirkel2 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  top: -1.25rem;
+  left: 16.875rem;
+  background: #F2843A;
+  border-radius: 50%;
+  border: 0.375rem solid #858381;
+}
+
+.rand_cirkel3 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  top: 15.313rem;
+  left: -2.813rem;
+  background: #F2843A;
+  border-radius: 50%;
+  border: 0.375rem solid #858381;
+}
+
+.rand_cirkel4 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  top: 15.313rem;
+  left: 16.25rem;
+  background: #F2843A;
+  border-radius: 50%;
+  border: 0.375rem solid #858381;
+}
+
+.cone1 {
+  position: absolute;
+  top: 14px;
+  left: -14px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(130deg);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 95px solid #858381;
+  border-radius: 50%
+}
+
+.cone2 {
+  position: absolute;
+  top: 14px;
+  left: 308px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(230deg);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 95px solid #ffffff;
+  border-radius: 50%
+}
+
+.cone3 {
+  position: absolute;
+  top: 283px;
+  left: -18px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(50deg);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 95px solid #fff;
+  border-radius: 50%
+}
+
+.cone4 {
+  position: absolute;
+  top: 286px;
+  left: 302px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(-47deg);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 95px solid #858381;
+  border-radius: 50%
+}
+
+.kleine_cone1 {
+  position: absolute;
+  top: 27px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(129deg);
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 75px solid #ffffff;
+  border-radius: 50%
+}
+
+.kleine_cone2 {
+  position: absolute;
+  top: 20px;
+  left: 312px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(229deg);
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 85px solid #858381;
+  border-radius: 50%
+}
+
+.kleine_cone3 {
+  position: absolute;
+  top: 291px;
+  left: 305px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(311deg);
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 80px solid #fff;
+  border-radius: 50%
+}
+
+.kleine_cone4 {
+  position: absolute;
+  top: 288px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  transform: rotate(410deg);
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 80px solid #858381;
+  border-radius: 50%
+}
+
+.lichaam_strepen {
+  width: 100%;
+  height: 2.5%;
+  top: 188px;
+  left: 0;
+  background-color: #858381;
+  transform-origin: center;
+  transform: rotate(40deg);
+  position: absolute;
+}
+
+.lichaam_strepen2 {
+  width: 100%;
+  height: 2.5%;
+  top: 188px;
+  left: 0;
+  background-color: #858381;
+  transform-origin: center;
+  transform: rotate(139deg);
+  position: absolute;
+}
+
+.klein_rondje1 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.250rem solid grey;
+  top: 0;
+  left: 150px;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.klein_rondje2 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 0;
+  left: 215px;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.klein_rondje3 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 235px;
+  left: 150px;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.klein_rondje4 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 235px;
+  left: 215px;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.klein_rondje5 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 85px;
+  left: 3.969rem;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.klein_rondje6 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 150px;
+  left: 3.969rem;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.klein_rondje7 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 85px;
+  left: 305px;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.klein_rondje8 {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.25rem solid grey;
+  top: 150px;
+  left: 305px;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+
+/*
+.figuur_klein_rondje1 {
+  position: absolute;
+  width: 1.063rem;
+  height: 1.063rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.250rem solid grey;
+  top: 64px;
+  left: 11.299rem;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.figuur_klein_rondje2 {
+  position: absolute;
+  width: 1.063rem;
+  height: 1.063rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.250rem solid grey;
+  top: 163px;
+  left: 11.29rem;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.figuur_klein_rondje3 {
+  position: absolute;
+  width: 1.063rem;
+  height: 1.063rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.250rem solid grey;
+  top: 116px;
+  left: 8.1rem;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+}
+
+.figuur_klein_rondje4 {
+  position: absolute;
+  width: 1.063rem;
+  height: 1.063rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.250rem solid grey;
+  top: 113px;
+  left: 14.39rem;
+  transform-origin: center;
+  transform: translateY(4.312rem);
+} */
